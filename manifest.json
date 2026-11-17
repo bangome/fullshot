@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "FullShot - 풀페이지 스크린샷",
+  "version": "1.0.0",
+  "description": "스크롤 영역까지 포함해 웹페이지 전체를 한 장으로 캡처합니다. PNG/JPEG/PDF 저장 및 클립보드 복사 지원.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "action": {
+    "default_title": "FullShot 스크린샷",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  }
+}

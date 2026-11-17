@@ -1,0 +1,29 @@
+/* content.css 는 동적 주입 방식에서는 사용하지 않지만,
+   필요 시 chrome.scripting.insertCSS 로 주입 가능하도록 보관.
+   현재 오버레이 스타일은 content.js 가 인라인으로 처리하지 않고
+   여기 정의를 쓰려면 background 에서 insertCSS 해야 함. */
+.fullshot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.25);
+}
+.fullshot-selection {
+  position: fixed;
+  display: none;
+  border: 2px dashed #4f8cff;
+  background: rgba(79, 140, 255, 0.15);
+  box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.001);
+}
+.fullshot-hint {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font: 13px/1.4 system-ui, sans-serif;
+}

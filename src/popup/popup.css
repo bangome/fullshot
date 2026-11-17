@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+body {
+  width: 280px;
+  margin: 0;
+  padding: 14px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+.header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.header h1 { font-size: 16px; margin: 0; }
+.logo { font-size: 20px; }
+
+.actions { display: flex; flex-direction: column; gap: 8px; }
+.btn {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 10px 12px;
+  border: 1px solid #334155; border-radius: 10px;
+  background: #1e293b; color: #e2e8f0;
+  cursor: pointer; text-align: left;
+  transition: background .15s, border-color .15s;
+}
+.btn:hover { background: #273449; border-color: #475569; }
+.btn.primary { background: #2563eb; border-color: #2563eb; }
+.btn.primary:hover { background: #1d4ed8; }
+.btn .ico { font-size: 18px; }
+.btn .txt { display: flex; flex-direction: column; }
+.btn .txt strong { font-size: 13px; }
+.btn .txt small { font-size: 11px; opacity: .7; }
+.btn:disabled { opacity: .5; cursor: default; }
+
+.settings { margin-top: 12px; font-size: 12px; }
+.settings summary { cursor: pointer; opacity: .85; }
+.settings label {
+  display: flex; flex-direction: column; gap: 4px;
+  margin-top: 10px;
+}
+.settings select, .settings input[type="range"] {
+  width: 100%;
+}
+
+.status { font-size: 12px; min-height: 16px; margin: 10px 0 0; color: #fca5a5; }
+.status.ok { color: #86efac; }
